@@ -1,0 +1,9 @@
+name: Old
+
+on: workflow_dispatch
+
+jobs:
+  old-go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-go@v4
