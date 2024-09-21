@@ -5,10 +5,10 @@ updates:
     schedule:
       interval: daily
     ignore:
-      - dependancy-name: action/upload-artifact
+      - dependency-name: action/upload-artifact
         versions:
           - 4.3.0
           - 4.3.1
-      - dependancy-name: "actions/*"
+      - dependency-name: "actions/*"
         update-types:
           - version-update:semver-major
