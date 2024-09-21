@@ -4,3 +4,11 @@ updates:
     directory: /
     schedule:
       interval: daily
+    ignore:
+      - dependancy-name: action/upload-artifact
+        versions:
+          - 4.3.0
+          - 4.3.1
+      - dependancy-name: "actions/*"
+        update-types:
+          - version-update:semver-major
