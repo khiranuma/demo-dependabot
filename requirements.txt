@@ -2,7 +2,7 @@ flask==3.0.3
 pandas==2.2.3
 numpy==1.25
 scipy==1.14.1
-scikit-learn==1.4.2
+scikit-learn==1.5.2
 
 Django==5.0.9
 torch==2.4.1
