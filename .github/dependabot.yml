@@ -12,3 +12,8 @@ updates:
       - dependency-name: "actions/*"
         update-types:
           - version-update:semver-major
+
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: daily
