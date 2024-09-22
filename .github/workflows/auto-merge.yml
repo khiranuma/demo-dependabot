@@ -20,5 +20,5 @@ jobs:
         uses: dependabot/fetch-metadata@v2
 
       - name: merge automaticaly if patch update
-        if: ${{steps.metadata.outputs.dependency-type == 'version-update:semver-patch'}}
+        if: ${{steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
         run: gh pr merge ${GITHUB_HEAD_REF} --merge
