@@ -1,4 +1,4 @@
-name: Auto Merge Dependabot Pull Request
+name: Auto Merge Dependabot Pull Requests
 
 on: pull_request
 
@@ -15,5 +15,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Merge Dependabot Pull Request
-        run: gh pr merge "${GITHUB_HEAD_REF}" --merge
+      - name: fetch metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v2
+
+      - name: merge automaticaly if patch update
+        if: ${{steps.metadata.outputs.dependency-type == 'version-update:semver-patch'}}
+        run: gh pr merge ${GITHUB_HEAD_REF} --merge
