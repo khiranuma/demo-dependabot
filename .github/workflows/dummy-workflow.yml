@@ -1,0 +1,10 @@
+name: Dummy workflow to pull request
+
+on: pull_request
+
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: sleep 120
+        run: sleep 120
